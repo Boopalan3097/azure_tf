@@ -1,0 +1,58 @@
+Terraform used the selected providers to generate the following execution plan.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_application_insights.example will be created
+  + resource "azurerm_application_insights" "example" {
+      + app_id                                = (known after apply)
+      + application_type                      = "web"
+      + connection_string                     = (sensitive value)
+      + daily_data_cap_in_gb                  = (known after apply)
+      + daily_data_cap_notifications_disabled = (known after apply)
+      + disable_ip_masking                    = false
+      + force_customer_storage_for_profiler   = false
+      + id                                    = (known after apply)
+      + instrumentation_key                   = (sensitive value)
+      + internet_ingestion_enabled            = true
+      + internet_query_enabled                = true
+      + local_authentication_disabled         = false
+      + location                              = "westeurope"
+      + name                                  = "tf-test-appinsights"
+      + resource_group_name                   = "tf-test"
+      + retention_in_days                     = 90
+      + sampling_percentage                   = 100
+      + workspace_id                          = (known after apply)
+    }
+
+  # azurerm_log_analytics_workspace.example will be created
+  + resource "azurerm_log_analytics_workspace" "example" {
+      + allow_resource_only_permissions = true
+      + daily_quota_gb                  = -1
+      + id                              = (known after apply)
+      + internet_ingestion_enabled      = true
+      + internet_query_enabled          = true
+      + local_authentication_disabled   = false
+      + location                        = "westeurope"
+      + name                            = "workspace-test"
+      + primary_shared_key              = (sensitive value)
+      + resource_group_name             = "tf-test"
+      + retention_in_days               = 30
+      + secondary_shared_key            = (sensitive value)
+      + sku                             = "PerGB2018"
+      + workspace_id                    = (known after apply)
+    }
+
+  # azurerm_resource_group.example will be created
+  + resource "azurerm_resource_group" "example" {
+      + id       = (known after apply)
+      + location = "westeurope"
+      + name     = "tf-test"
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + app_id              = (known after apply)
+  + instrumentation_key = (sensitive value)
