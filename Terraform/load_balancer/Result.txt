@@ -1,0 +1,57 @@
+Terraform used the selected providers to generate the following execution plan.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_lb.example will be created
+  + resource "azurerm_lb" "example" {
+      + id                   = (known after apply)
+      + location             = "westeurope"
+      + name                 = "TestLoadBalancer"
+      + private_ip_address   = (known after apply)
+      + private_ip_addresses = (known after apply)
+      + resource_group_name  = "LoadBalancerRG"
+      + sku                  = "Basic"
+      + sku_tier             = "Regional"
+
+      + frontend_ip_configuration {
+          + gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+          + id                                                 = (known after apply)                       
+          + inbound_nat_rules                                  = (known after apply)                       
+          + load_balancer_rules                                = (known after apply)                       
+          + name                                               = "PublicIPAddress"                      
+          + outbound_rules                                     = (known after apply)                       
+          + private_ip_address                                 = (known after apply)                       
+          + private_ip_address_allocation                      = (known after apply)                       
+          + private_ip_address_version                         = (known after apply)                       
+          + public_ip_address_id                               = (known after apply)                       
+          + public_ip_prefix_id                                = (known after apply)                       
+          + subnet_id                                          = (known after apply)                      
+       
+    }
+
+  # azurerm_public_ip.example will be created
+  + resource "azurerm_public_ip" "example" {
+      + allocation_method       = "Static"
+      + ddos_protection_mode    = "VirtualNetworkInherited"
+      + fqdn                    = (known after apply)
+      + id                      = (known after apply)
+      + idle_timeout_in_minutes = 4
+      + ip_address              = (known after apply)
+      + ip_version              = "IPv4"
+      + location                = "westeurope"
+      + name                    = "PublicIPForLB"
+      + resource_group_name     = "LoadBalancerRG"
+      + sku                     = "Basic"
+      + sku_tier                = "Regional"
+    }
+
+  # azurerm_resource_group.example will be created
+  + resource "azurerm_resource_group" "example" {
+      + id       = (known after apply)
+      + location = "westeurope"
+      + name     = "LoadBalancerRG"
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
