@@ -1,8 +1,0 @@
-Create workspaces using the following Terraform commands:
-
-terraform workspace new dev: Creates a new workspace named "dev."
-terraform workspace select dev: Switches to the "dev" workspace.
-terraform workspace list: Lists all available workspaces.
-
-
-It creates seperate state files & creates same resources in seperate environment.
