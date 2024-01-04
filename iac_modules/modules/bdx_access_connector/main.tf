@@ -8,6 +8,6 @@ resource "azurerm_databricks_access_connector" "dbx_access_connector" {
   }
 
   tags = {
-    Environment = "Production"
+    Environment = "Dev"
   }
 }
